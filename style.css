@@ -1,0 +1,38 @@
+.heart {
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    background-image: url(./web_heart_animation.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 2900%;
+    /*animation: heart-burst 1s infinite;*/
+}
+
+.is_animating {
+    animation: heart-burst .8s steps(28) 1;
+}
+
+.is_animating-revert{
+    animation: heart-burst-revert .8s steps(28) 1;
+}
+
+@keyframes heart-burst {
+    0% {
+        background-position: left;
+    }
+
+    100% {
+        background-position: right;
+    }
+}
+
+@keyframes heart-burst-revert {
+    0% {
+        background-position: right;
+    }
+
+    100% {
+        background-position: left;
+    }
+}
